@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "581909085676",
+    "firebase_url": "https://femcare-cdbbd-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "femcare-cdbbd",
+    "storage_bucket": "femcare-cdbbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581909085676:android:f07e03929a709a862c14c9",
+        "android_client_info": {
+          "package_name": "com.healthcare.femcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581909085676-crvptcua4cqvr1rflo8d2bhc1ffe7kis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6T68B3bOFjpJBBtFnRUWJdr8mOdW5Nuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581909085676-crvptcua4cqvr1rflo8d2bhc1ffe7kis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

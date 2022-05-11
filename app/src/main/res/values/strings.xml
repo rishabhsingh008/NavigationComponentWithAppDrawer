@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FemCare</string>
+    <string name="app_language_english">English</string>
+    <string name="app_language_hindi">हिन्दी</string>
+    <string name="i_hereby_accept_terms_and_conditions">I hereby accept terms and conditions</string>
+    <string name="healthcare_logo">HealthCare Logo</string>
+    <string name="welcome_dost">Welcome Dost</string>
+    <string name="my_profile">My Profile</string>
+    <string name="name">Name</string>
+    <string name="age">Age(in years)</string>
+    <string name="weight_in_kg">Weight (in kg)</string>
+    <string name="height">Height</string>
+    <string name="actual_fee_inr_2499">Actual Fee - <strike>INR 2499</strike> INR 1499</string>
+</resources>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_list"
+    app:startDestination="@id/languageSelectionFragment">
+
+    <fragment
+        android:id="@+id/languageSelectionFragment"
+        android:name="com.healthcare.femcare.fragments.LanguageSelectionFragment"
+        tools:layout="@layout/fragment_language_selection">
+
+        <action
+            android:id="@+id/languageSelectionFragment_to_fragmentRegistration"
+            app:destination="@+id/fragmentRegistration"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentRegistration"
+        android:name="com.healthcare.femcare.fragments.FragmentRegistration"
+        tools:layout="@layout/fragment_registration">
+
+        <action
+            android:id="@+id/fragmentRegistration_to_fragmentWelcomePopup"
+            app:destination="@id/fragmentWelcomePopup"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentWelcomePopup"
+        android:name="com.healthcare.femcare.fragments.FragmentWelcomePopUp"
+        tools:layout="@layout/welcome_popup">
+
+        <action
+            android:id="@+id/fragmentWelcomePopup_to_fragmentProfile"
+            app:destination="@id/fragmentProfile"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+        <argument
+            android:name="registrationDetails"
+            app:argType="com.healthcare.femcare.models.RegistrationDetails"></argument>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.healthcare.femcare.fragments.FragmentProfile"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/fragmentProfile_to_fragmentGoalSetting"
+            app:destination="@id/fragmentGoalSetting"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+        <argument
+            android:name="registrationDetails"
+            app:argType="com.healthcare.femcare.models.RegistrationDetails"></argument>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentGoalSetting"
+        android:name="com.healthcare.femcare.fragments.FragmentGoalSetting"
+        tools:layout="@layout/fragment_goal_setting">
+
+        <action
+            android:id="@+id/fragmentGoalSetting_to_fragmentDentalCare"
+            app:destination="@id/fragmentDentalCare"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+        <action
+            android:id="@+id/fragmentGoalSetting_to_fragmentPeriodCare"
+            app:destination="@id/fragmentPeriodCare"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+        <argument
+            android:name="registrationDetails"
+            app:argType="com.healthcare.femcare.models.RegistrationDetails"></argument>
+
+        <argument
+            android:name="userProfile"
+            app:argType="com.healthcare.femcare.models.UserProfile" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentPeriodCare"
+        android:name="com.healthcare.femcare.fragments.FragmentPeriodCareSymptoms"
+        tools:layout="@layout/fragment_period_care_symptoms">
+
+        <action
+            android:id="@+id/fragmentPeriodCare_to_fragmentSubscriptionPlan"
+            app:destination="@id/fragmentSubscriptionPlan"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <argument
+            android:name="registrationDetails"
+            app:argType="com.healthcare.femcare.models.RegistrationDetails"></argument>
+
+        <argument
+            android:name="userProfile"
+            app:argType="com.healthcare.femcare.models.UserProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentDentalCare"
+        android:name="com.healthcare.femcare.fragments.FragmentDentalCareSymptoms"
+        tools:layout="@layout/fragment_dental_care_symptoms">
+
+        <action
+            android:id="@+id/fragmentDental_to_fragmentSubscriptionPlan"
+            app:destination="@id/fragmentSubscriptionPlan"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+        <argument
+            android:name="registrationDetails"
+            app:argType="com.healthcare.femcare.models.RegistrationDetails"></argument>
+
+        <argument
+            android:name="userProfile"
+            app:argType="com.healthcare.femcare.models.UserProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentSubscriptionPlan"
+        android:name="com.healthcare.femcare.fragments.FragmentSubscriptionPlan"
+        tools:layout="@layout/fragment_subsciption_plan">
+
+        <action
+            android:id="@+id/fragmentSubscriptionPlan_to_fragmentSuccess"
+            app:destination="@id/fragmentSuccess"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+        <argument
+            android:name="registrationDetails"
+            app:argType="com.healthcare.femcare.models.RegistrationDetails"></argument>
+
+        <argument
+            android:name="userProfile"
+            app:argType="com.healthcare.femcare.models.UserProfile" />
+
+        <argument
+            android:name="symptoms"
+            app:argType="com.healthcare.femcare.models.Symptoms"></argument>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentSuccess"
+        android:name="com.healthcare.femcare.fragments.FragmentSuccess"
+        tools:layout="@layout/fragment_success_layout">
+
+        <action
+            android:id="@+id/fragmentSuccess_to_home"
+            app:destination="@id/languageSelectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+
+        <argument
+            android:name="userProfile"
+            app:argType="com.healthcare.femcare.models.UserProfile" />
+
+    </fragment>
+
+</navigation>
